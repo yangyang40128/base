@@ -88,6 +88,20 @@ module.exports = function(grunt) {
                     ]
                 }
             },
+        },
+        watch: {
+            app: {
+                files: 'asset/internal/css/main.less',
+                tasks: ['less:front']
+            }
+        },
+        connect: {
+            hq: {
+                options: {
+                    port: 8080,
+                    base: '/Users/teambegin/Desktop/git/base/'
+                }
+            }
         }
     });
 
@@ -97,6 +111,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-php-set-constant');
 
     //grunt.registerTask('default', ['clean', 'less', 'uglify', 'setPHPConstant']);
