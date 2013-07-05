@@ -99,7 +99,7 @@ module.exports = function(grunt) {
             hq: {
                 options: {
                     port: 8080,
-                    base: '/Users/teambegin/Desktop/git/base/'
+                    base: '.'
                 }
             }
         }
