@@ -93,9 +93,13 @@ header.top {
 
 	div.header{
 		display: table;
-		width: 90%;
+		width: 300px;
 		margin: 1em auto;
 		overflow: hidden;
+
+		a{
+			display: table-row;
+		}
 
 		.logo{
 			font-family: @font-title;
@@ -103,14 +107,19 @@ header.top {
 			display: table-cell;
 			.font(4);
 
-			a{
-				color: @green;
-				text-shadow: -1px -1px 0 darken(@darkGreen, 10%);
-
-				span:nth-child(2){
-					font-family: @font-basis;
-				}
+			span:nth-child(2){
+				font-family: @font-basis;
 			}
+		}
+
+		.green{
+			color: @green;
+			text-shadow: -1px -1px 0 darken(@darkGreen, 10%);
+		}
+
+		.darkGreen{
+			color: @darkGreen;
+			text-shadow: 0 1px 0 lighten(@darkGreen, 40%);
 		}
 
 		.tagline{
@@ -119,15 +128,32 @@ header.top {
 			text-align: center;
 			vertical-align: middle;
 			font-family: @font-alt;
-			color: @darkGreen;
 			.font(1.375);
-			text-shadow: 0 1px 0 lighten(@darkGreen, 30%);
+		}
+
+		p.logo{
+			display: none;
+		}
+		h1.logo{
+			text-align: center;
+		}
+		.tagline{
+			display: none;
+		}
+
+		&:hover{
+			p.logo{
+				display: table-cell;
+			}
+			h1.logo{
+				display: none;
+			}
+			.tagline{
+				display: table-cell;
+			}
 		}
 	}
 
-	h1.logo{
-		display: none !important;
-	}
 
 	nav{
 		display: block;
@@ -169,23 +195,26 @@ header.top {
 	}
 
 	@media screen and (min-width: 450px) {
-		p.logo{
-			display: none !important;
-		}
 
-		h1.logo{
-			display: table-cell !important;
-		}
 	}
 
 	@media screen and (min-width: 600px) {
-		padding-top: 2em;
+		padding-top: 3em;
 
 		div.header{
 			width: 500px;
 			margin: 1em;
 
+			p.logo{
+				display: none !important;
+			}
+
+			h1.logo{
+				display: table-cell !important;
+			}
+
 			.tagline{
+				display: table-cell;
 				vertical-align: baseline;
 			}
 		}
@@ -194,7 +223,7 @@ header.top {
 			position: absolute;
 			top: 0;
 			right: 0;
-			width: 400px;
+			width: 60%;
 			border-bottom: 1px solid lighten(@grey, 20%);
 
 			ul.menu li a{
@@ -205,6 +234,15 @@ header.top {
 				}
 			}
 		}
+	}
+
+	@media screen and (min-width: 800px) {
+		padding-top: 1em;
+
+		div.header{
+			margin: 1em;
+		}
+
 	}
 }
 
