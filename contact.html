@@ -32,42 +32,42 @@
 	<div class="main wrap">
 
 		<article>
-			<header>
-				<h2 class="title">First Post In Action!</h2>
-				<span class="date">2013-07-04</span>
-			</header>
-
-			<div class="content">
-				<h3>section1</h3>
-
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, dolorum, nihil, excepturi cumque iusto sit voluptatibus quidem illum asperiores labore odio at id repudiandae facere expedita voluptatum earum perspiciatis vitae!</p>
-
-				<h3>section2</h3>
-
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, tempore facilis nesciunt voluptatum vero eum vel animi. Laborum, natus minima at voluptate amet veniam tempora nam ullam autem voluptates accusamus.</p>
-
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, neque, ut, nobis quod architecto autem nostrum quos quas quam quasi dolore ipsum fugiat rem alias repellat? Nulla, facere a doloribus.</p>
-			</div>
+			<form class="contact" action="#" onsubmit="return checkForm(this);">
+			
+				<p>
+					We're working on improving the friend suggestion page, 
+					but in the mean time you can search for your buddies manually 
+					or see who among your Facebook friends or Google contacts is also using The Old Reader. 
+					We'll also send you an e-mail when someone starts following you.
+				</p>
+				<h2>Say something to us!</h2>
+				
+				<div class="field">
+					<label for="username">Your name<span class="tip"> (* usrname is require!~)</span></label>
+					<input type="text" name="userName" id="first" placeholder="First"/>
+					<input type="text" name="userName" id="last" placeholder="Last"/>
+					
+				</div>
+				<div class="field">	
+					<label for="email">Email<span class="tip"> (* make sure you enter the correct email address)</span></label>
+					<input type="text" name="email" id="email" placeholder='Enter your email address'/>
+					
+				</div>
+				
+				<div class="field content">
+					<label for="content">Message<span class="tip">( * message is require!~)</span></label>
+					<textarea id="content" rows="15" placeholder="leave your message here!~"></textarea>
+					
+				</div>
+				
+				<div class="field submit_btn">
+					<input type="submit" value="leave message" name="submit" id="submit" />
+				</div>
+				
+		</form>
 		</article>
 
-		<article>
-			<header>
-				<h2 class="title">Second Post Incoming!</h2>
-				<span class="date">2013-07-05</span>
-			</header>
-
-			<div class="content">
-				<h3>section1</h3>
-
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, dolorum, nihil, excepturi cumque iusto sit voluptatibus quidem illum asperiores labore odio at id repudiandae facere expedita voluptatum earum perspiciatis vitae!</p>
-
-				<h3>section2</h3>
-
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, tempore facilis nesciunt voluptatum vero eum vel animi. Laborum, natus minima at voluptate amet veniam tempora nam ullam autem voluptates accusamus.</p>
-
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, neque, ut, nobis quod architecto autem nostrum quos quas quam quasi dolore ipsum fugiat rem alias repellat? Nulla, facere a doloribus.</p>
-			</div>
-		</article>
+		
 	</div>
 
 	<footer class="wrap">

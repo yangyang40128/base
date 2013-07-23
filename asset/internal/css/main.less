@@ -67,6 +67,16 @@
 	box-sizing: @boxmodel;
 }
 
+.border-radius(@radius){
+	-webkit-border-radius:@radius;
+	-moz-border-radius:@radius;
+	border-radius:@radius;
+}
+.img{
+	width:100%;
+	height:100%;
+}
+
 .wrap{
 	max-width: 800px;
 	margin: 0 auto;
@@ -326,9 +336,383 @@ div.main{
 				color: @grey;
 			}
 		}
+		
+		div.project{
+		
+			margin:1em -2em;
+			background:#fff;
+			.loadingPanel{
+				display:block;
+			}
+			ul{
+				list-style-type:none;
+				padding:0px;
+				margin:0px;
+				li{
+					h5{
+						text-align:center;
+						
+					}
+				}
+				
+			}
+			h2{
+				text-align:center;
+				font-family: @font-alt2;
+				color:@grey;
+				padding:1em 2em;
+			}
+			div.project_brief{
+				text-align:center;
+				font-family: @font-alt2;
+				color:@grey;
+				.font(1);
+				line-height:1.5em;
+				padding:1em 2em;
+			}
+			div.logo_wrap{
+				display:none;
+			}
+			img{
+					width:100%;
+					.box-shadow(1px 1px 4px #aaa,-1px -1px 4px #aaa);
+				}
+			div.odd{
+				//background:rgba(68,196,253,0.4)
+			}
+			div.project_introduction{
+				padding:2em 2em;
+				h3{
+					text-align:center;
+				}
+				p.project_detail{
+					line-height:2em;
+					padding:1em 2em;
+					color:@grey;
+					//font-family:@font-alt;
+					//font-size:0.8em;
+				}
+				ul.tabList{
+					margin:0 auto;
+					li{
+						border:#ccc solid 1px;	
+						background:fadeout(white,10%);
+						
+						
+						a{
+							
+							.font(1.2);
+							color:@grey;
+							text-decoration:none;
+							display:block;
+							height:1.2em;
+							line-height:1.2em;
+							padding:3px;
+							transition:all ease 0.5s;
+						}
+						
+					}
+					li.current{
+								background:#59b1f6;
+								a{
+									color:@paper;
+								}
+							}
+				}
+			
+				div.tab_content_list{
+							padding:1.2em;
+							line-height:1.2em;
+							margin-bottom:1.2em;
+							
+							div{
+								display:none;
+								transition:all ease 0.3s;
+							}
+							div.current{
+								display:block;
+							}
+						}
+				}
+			
+			@media screen and (min-width:600px){
+				
+				div.logo_wrap{
+					display:block;
+					background:rgba(68,196,253,0.4);
+					overflow:hidden;
+					padding:20px;
+					margin-bottom:15px;
+					ul.project_logo{
+						width:100%;
+						li{
+							float:left;
+							margin:5px;
+							width:20%;
+						}
+						
+						
+					}
+				}
+				div.project_introduction{
+					div.current_logo{
+						clear:both;
+						img{
+							width:50%;
+							display:block;
+							margin:0 auto;
+							
+						}
+					}
+					
+					h3{
+						text-align:center;
+						display:block;
+					}
+					
+					ul.tabList{
+						li{
+							float:left;
+							
+							
+							a{
+								
+								text-decoration:none;
+								display:block;
+								padding:3px 20px;
+							}
+						}
+						:first-child{
+							.border-radius(5px 0 0 5px);
+						}
+						:last-child{
+							.border-radius(0 5px 5px 0);
+						}
+						li.current{
+							a{
+								color:@paper;
+							}
+						}
+						
+						
+					}
+					div.tab_content_list{
+						clear:both;
+						padding:20px;
+						line-height:1.5em;
+						
+					}
+				}
+			}
+		}
+		
+		//project end
+		
+		
+		div.team{
+			h2{
+				text-align:center;
+				font-family: @font-title;
+				font-weight: normal;
+				.font(2);
+				color:#792c5c;
+			}
+			div.team_brief{
+				text-align:center;
+				font-family: @font-title;
+				font-weight: normal;
+				.font(1);
+				padding-top:1em;
+				color:@coffee;
+			}
+			ul.member{
+				list-style-type:none;
+				padding:0px;
+				marging:0px;
+				li{
+					margin:2px;
+				}
+				img{
+					width:100%;
+					
+					
+				}
+				div.thumbPic{
+					position:relative;
+				}
+				div.title{
+					position:absolute;
+					overflow:hidden;
+					bottom:0;
+					left:0;
+					right:0;
+					padding:0.5em;
+					font-size:0.7em;
+					color:#a0c33f;
+					background:fadeout(black,60%);
+					div.author{
+						background:none;
+						color:@paper;
+						font-size:1.2em;
+						padding-bottom:0.9em;
+					}
+				}
+				div.member_info{
+						div.contact_he{
+							a{
+								display:inline-block;
+								margin:1em 0 1em 1em;
+								font-family: @font-title;
+								font-weight: normal;
+								.font(1);
+								.border-radius(30px);
+								width:30px;
+								height:30px;
+								color:@paper;
+								text-align:center;
+								line-height:28px;
+								background:fadeout(black,70%);
+								-webkit-transition:all ease 0.3s;
+								
+								&:hover{
+								cursor:pointer;
+								background:fadeout(black,20%);
+								
+							}
+							}
+							
+						}
+					}
+				
+				@media screen and (min-width: 550px) {
+					li{
+						float:left;
+						width:40%;
+						
+					}
+					div.member_info{
+						display:block;
+					}
+
+					
+				}
+				@media screen and (min-width: 700px) {
+					li{
+						float:left;
+						width:30%;
+						
+					}
+					div.member_info{
+						display:block;
+					}
+
+					
+				}
+			}
+		}
+
+		//team end
+		
+		form.contact{
+		
+			
+			.border-radius(3px);
+			//.box-shadow(2px 2px 6px #aaa,1px 1px 6px #aaa);
+			//border: 1px solid #D4D4D4;
+			padding-top:10px;
+			padding-bottom:20px;
+			color:@coffee;
+			p{
+				font-family:@font-title;
+				.font(1);
+				text-align:center;
+				padding:0 1em;
+				color:fadeout(black,70%);
+			}
+			h2{
+				padding-left:1em;
+				font-family:@font-alt;
+			}
+			.field{		
+				label{
+					display:block;
+					margin-left:10px;
+					font-family:@font-alt;
+				}
+				input{
+					display:block;
+					width:90%;
+					margin: 0.5em auto;
+					background:fadeout(black,90%);
+					height:25px;
+					border:none;
+					padding:5px;
+					.border-radius(3px);
+					//.box-shadow(1px 1px 6px #aaa,1px 1px 6px #aaa);
+				}
+				textarea{
+					display:block;
+					width:90%;
+					margin: 0.5em auto;
+					background:fadeout(black,90%);
+					border:none;
+					padding:5px;
+					.border-radius(3px);
+					//.box-shadow(1px 1px 6px #aaa,1px 1px 6px #aaa);
+				}
+				span.tip{
+					display:inline;
+					color:red;
+					font-size:0.6em;
+				}
+			}
+			.submit_btn{
+				input{
+					background: none repeat scroll 0 0 #00C8C8;
+					color:@paper;
+					&:hover{
+						cursor:pointer;
+					}
+				}
+				
+			}
+			@media screen and (min-width:600px){
+				.field{
+					float:left;
+					width:50%;
+					
+					&.content{
+						float:none;
+						clear:both;
+						width:100%;
+					}
+					&.submit_btn{
+						float:none;
+						clear:both;
+						margin-bottom:20px;
+					}
+		
+				
+				}
+				
+			}
+			
+		}
+		
+		//contact end
+		
+		
+		
+		
 	}
 
 }
+
+//
+
+
+
+
 
 footer{
 	background-color: @paper;
